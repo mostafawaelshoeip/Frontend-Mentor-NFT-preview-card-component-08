@@ -63,6 +63,12 @@ article h1 {
     font-size: 1.7rem;
     font-weight: 450;
 }
+
+/* Heading Hover  */
+article h1:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
  
 article p {
     color: var(--White);
@@ -146,6 +152,12 @@ footer span:first-of-type {
 
 footer span:last-child {
     color: var(--White);
+}
+
+/* Owner Hover */
+footer span:last-child:hover {
+    color: var(--Cyan);
+    cursor: pointer;
 }
 
 /* Media Qery */

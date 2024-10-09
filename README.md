@@ -1,9 +1,9 @@
 ``` 
 
-My challenge 07 with Frontend Mentor.
+My challenge 08 with Frontend Mentor.
 
-This is a responsive QR preview card.
+This is a responsive NTF preview card component.
 
-Created on 7/10/2024
+Created on 9/10/2024
 
 ```

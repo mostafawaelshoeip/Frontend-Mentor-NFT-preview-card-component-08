@@ -3,21 +3,25 @@
 
 /* Main colors */
 :root {
-    --White: hsl(0, 0%, 100%);
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
     
-    --Slate-300: hsl(212, 45%, 89%);
-    --Slate-500: hsl(216, 15%, 48%);
-    --Slate-900: hsl(218, 44%, 22%);
+    /* Neutral */
+    --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
 }
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    line-height: 1.5;
 }
 
 body {
-    background-color: var(--Slate-300);
+    background-color: var(--Very-dark-blue-main-BG);
     font-family: "Outfit", sans-serif;
     width: 100vw;
     height: 100vh;
@@ -25,54 +29,151 @@ body {
     flex-flow: row wrap;
     justify-content: center;
     align-content: center;
+    font-size: 18px;
 }
 
-
+/* Main Content */
 main {
-    background-color: var(--White);
-    max-width: 19rem;
-    max-height: 31rem;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 59% 41%;
-    text-align: center;
-    row-gap: 5px;
-    border-radius: 20px;
+    background-color: var(--Very-dark-blue-card-BG);
+    max-width: 20rem;
+    max-height: 36rem;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: start;
+    border-radius: 10px;
     margin: 1rem;
 }
-/* QR Image  */
-main img {
-    width: 100%;
-    height: 100%;
-    padding: 1rem;
-    border-radius: 28px;
-}
 
-/* QR Iformation  */
-main section:last-of-type {
-    width: 100%;
-    display: grid;
-
-}
-main section h1 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding: 0px 1.2rem;
+/* Header */
+header {
     width: 100%;
 }
 
-main section p {
-    padding: 0 1.5rem;
-    opacity: 0.8;
-    line-height: 1.6;
+main header img {
+    max-width: 100%;
+    height: auto;
+    padding: 1.5rem;
+    border-radius: 30px;
 }
 
-.attribution {
-    font-size: 0.7rem;
+/* Article */
+article h1 {
+    color: var(--White);
+    margin:-1rem 0 0 1.5rem;
+    font-size: 1.7rem;
+    font-weight: 450;
+}
+ 
+article p {
+    color: var(--White);
+    opacity: 0.5;
+    padding: 0.7rem 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 250;
 }
 
-@media (max-width: 375px) {
+/* Section  */
+main section {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.5rem 1.5rem;
+    font-weight: 200;
+}
+
+main section span {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+main section span:first-child {
+    color: var(--Cyan);
+    font-weight: 400;
+
+}
+
+main section span:last-child {
+    color: var(--White);
+    opacity: 0.5;
+
+}
+
+main section span img {
+    margin: 0 8px;
+}
+
+main section span:first-child img {
+    width: 15px;
+}
+
+main section span:last-child img {
+    width: 20px;
+}
+
+/* Line Break */
+hr {
+    width: 100%;
+    margin: 1rem 1.5rem;
+    height: fit-content;
+    opacity: 0.1;
+}
+
+/* Footer  */
+main footer {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+    font-size: 1.2rem;
+
+}
+
+footer img {
+    width: 40px;
+    border: 2px solid rgb(255, 255, 255, 0.6);
+    border-radius: 50%;
+}
+
+footer span:first-of-type {
+    color: var(--White);
+    opacity: 0.6;
+    font-weight: 200;
+}
+
+footer span:last-child {
+    color: var(--White);
+}
+
+/* Media Qery */
+ @media (max-width: 375px) {
+
     body {
-        font-size: 14px;
+        font-size: 15px;
+        line-height: 1;
     }
-}
+     main {
+        align-content: space-evenly;
+     }
+
+     article p {
+        padding: 0.7rem;
+     }
+
+     main section {
+        padding: 0.5rem;
+     }
+
+
+     hr {
+        margin: 0.2rem 1rem;
+     }
+    footer {
+        /* width: 100% !important; */
+        padding: 0.7rem !important;
+    }
+
+ }
